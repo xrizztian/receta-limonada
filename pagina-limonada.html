@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CAMBIE el texto entre <title> y </title>: aparece en la pestaña del navegador -->
+  <title>Limonada de Ana · PIT 2026</title>
+  <style>
+    :root {
+      --naranja: #e08a2a;
+      --lima: #6a9a3a;
+      --tinta: #1c2430;
+      --papel: #fff8ee;
+      --tarjeta: #ffffff;
+      --muted: #5b6775;
+      --linea: #ead9c2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      color: var(--tinta);
+      background:
+        radial-gradient(circle at 12% 8%, #ffe7b8 0 18%, transparent 19%),
+        radial-gradient(circle at 88% 0%, #d8efb8 0 14%, transparent 15%),
+        var(--papel);
+      line-height: 1.5;
+    }
+
+    .envoltorio {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem 3rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      align-items: baseline;
+      margin-bottom: 1.6rem;
+    }
+
+    .curso {
+      margin: 0;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lima);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0.15em 0 0;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+    }
+
+    .autor {
+      margin: 0.4em 0 0;
+      color: var(--muted);
+    }
+
+    .autor strong { color: var(--naranja); }
+
+    .fichas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 1.4rem 0 1.8rem;
+    }
+
+    .ficha {
+      background: var(--tarjeta);
+      border: 1px solid var(--linea);
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      text-align: center;
+    }
+
+    .ficha span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .ficha strong {
+      font-size: 1.55rem;
+      color: var(--naranja);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 1.2rem;
+    }
+
+    section {
+      background: var(--tarjeta);
+      border: 1px solid var(--linea);
+      border-radius: 16px;
+      padding: 1.2rem 1.25rem 1.35rem;
+    }
+
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 1.15rem;
+      border-bottom: 3px solid var(--naranja);
+      padding-bottom: 0.35rem;
+      display: inline-block;
+    }
+
+    ul, ol { margin: 0; padding-left: 1.2rem; }
+
+    li { margin: 0.45rem 0; }
+
+    .cantidad {
+      font-weight: 700;
+      color: var(--lima);
+    }
+
+    .nota {
+      margin: 1.1rem 0 0;
+      padding: 0.75rem 0.9rem;
+      background: #fff4e0;
+      border-left: 4px solid var(--naranja);
+      border-radius: 0 10px 10px 0;
+      font-size: 0.95rem;
+    }
+
+    details {
+      margin-top: 1.2rem;
+      background: var(--tarjeta);
+      border: 1px dashed var(--linea);
+      border-radius: 14px;
+      padding: 0.7rem 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--lima);
+    }
+
+    footer {
+      margin-top: 1.6rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer a { color: var(--naranja); }
+
+    @media (max-width: 720px) {
+      .fichas, main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="envoltorio">
+    <header>
+      <div>
+        <!-- CAMBIE el nombre del curso si quiere, o déjelo -->
+        <p class="curso">PIT 2026 · Git y GitHub</p>
+        <!-- CAMBIE el título de su receta -->
+        <h1>Limonada de la casa</h1>
+        <p class="autor">
+          Preparada por
+          <!-- CAMBIE el nombre (el que quiera que se vea en la web) -->
+          <strong>Ana Pérez</strong>
+          · grupo
+          <!-- CAMBIE el número de grupo o ponga su usuario de GitHub -->
+          4
+        </p>
+      </div>
+    </header>
+
+    <div class="fichas">
+      <div class="ficha">
+        <span>Porciones</span>
+        <!-- CAMBIE el número de vasos -->
+        <strong>4</strong>
+      </div>
+      <div class="ficha">
+        <span>Minutos</span>
+        <!-- CAMBIE cuánto tarda -->
+        <strong>12</strong>
+      </div>
+      <div class="ficha">
+        <span>Limones</span>
+        <!-- CAMBIE cuántos limones -->
+        <strong>6</strong>
+      </div>
+    </div>
+
+    <main>
+      <section>
+        <h2>Ingredientes</h2>
+        <ul>
+          <!-- CAMBIE cantidades y textos de cada línea -->
+          <li><span class="cantidad">6</span> limones maduros</li>
+          <li><span class="cantidad">1</span> litro de agua fría</li>
+          <li><span class="cantidad">4</span> cucharadas de azúcar</li>
+          <li><span class="cantidad">8</span> hojas de menta</li>
+          <li><span class="cantidad">6</span> cubos de hielo</li>
+        </ul>
+        <p class="nota">
+          <!-- CAMBIE esta frase: un consejo, una broma o su variación -->
+          Truco: si queda muy ácida, sume 1 cucharada de azúcar. Si queda dulce, un limón más.
+        </p>
+      </section>
+
+      <section>
+        <h2>Pasos</h2>
+        <ol>
+          <!-- CAMBIE los pasos si quiere otra receta (sigue siendo su página) -->
+          <li>Exprimir los limones y colar las pepas.</li>
+          <li>Mezclar el jugo con el agua y el azúcar hasta disolver.</li>
+          <li>Machacar un poco la menta y añadirla.</li>
+          <li>Servir con hielo. Tomar fría.</li>
+        </ol>
+      </section>
+    </main>
+
+    <details>
+      <summary>Cómo publicar esto en GitHub Pages</summary>
+      <p>
+        1. Copie este archivo a la carpeta de <code>receta-limonada</code> con el nombre
+        <code>index.html</code>.<br>
+        2. <code>git add index.html</code>, commit y <code>git push</code>.<br>
+        3. En GitHub: Settings → Pages → Branch: <code>main</code> → Save.<br>
+        4. La URL queda: <code>https://SU-USUARIO.github.io/receta-limonada/</code>
+      </p>
+    </details>
+
+    <footer>
+      <!-- CAMBIE el usuario de GitHub (el de la URL, sin arroba) -->
+      Página de práctica ·
+      <a href="https://github.com/SU-USUARIO/receta-limonada">github.com/SU-USUARIO/receta-limonada</a>
+      · no se necesita JavaScript
+    </footer>
+  </div>
+</body>
+</html>
